@@ -2,9 +2,9 @@ import { NavLink } from "react-router-dom";
 import logo from "../assets/logo.png";
 import { useEffect, useState } from "react";
 const Navbar = () => {
-  const [theme, setTheme] = useState("cupcake");
-  const handleThemeChange = (e) => {
-    e.target.checked ? setTheme("symthwave") : setTheme("cupcake");
+  const [theme, setTheme] = useState("light");
+  const toggleTheme = (e) => {
+    e.target.checked ? setTheme("symthwave") : setTheme("light");
     document.documentElement.setAttribute("data-theme", theme);
   };
   console.log(theme);
@@ -96,7 +96,7 @@ const Navbar = () => {
       <div className="navbar-end">
         <label className="toggle text-base-content">
           <input
-            onChange={handleThemeChange}
+            onChange={toggleTheme}
             type="checkbox"
             value="synthwave"
             className="theme-controller"

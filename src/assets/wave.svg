@@ -1,0 +1,75 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <!-- Sky and Mountains Background (Moves Leftward) -->
+  <g>
+    <g id="background" transform="translate(0,0)">
+      <rect width="1600" height="600" fill="#e0e7f8" />
+      <circle cx="1400" cy="100" r="40" fill="#f77" />
+      <polygon points="600,600 800,150 1000,600" fill="#c0c8e4" />
+      <polygon points="400,600 700,200 900,600" fill="#a9b3d3" />
+      <polygon points="1000,600 1200,250 1400,600" fill="#b0bad8" />
+
+      <!-- Bridge -->
+      <g fill="#1a1a4e">
+        <rect x="0" y="480" width="1600" height="10" />
+        <rect x="0" y="490" width="1600" height="20" />
+        <g>
+          <rect x="50" y="500" width="20" height="100" />
+          <rect x="150" y="500" width="20" height="100" />
+          <rect x="250" y="500" width="20" height="100" />
+          <rect x="350" y="500" width="20" height="100" />
+          <rect x="450" y="500" width="20" height="100" />
+          <rect x="550" y="500" width="20" height="100" />
+          <rect x="650" y="500" width="20" height="100" />
+          <rect x="750" y="500" width="20" height="100" />
+          <rect x="850" y="500" width="20" height="100" />
+          <rect x="950" y="500" width="20" height="100" />
+          <rect x="1050" y="500" width="20" height="100" />
+          <rect x="1150" y="500" width="20" height="100" />
+          <rect x="1250" y="500" width="20" height="100" />
+          <rect x="1350" y="500" width="20" height="100" />
+          <rect x="1450" y="500" width="20" height="100" />
+        </g>
+      </g>
+    </g>
+    <animateTransform attributeName="transform" attributeType="XML" type="translate" from="0,0" to="-800,0" dur="20s" repeatCount="indefinite" />
+  </g>
+
+  <!-- Animated Cloud (Responsive to light/dark mode) -->
+  <g id="clouds" fill="currentColor" opacity="0.4">
+    <path d="M60,80 Q65,60 80,65 Q85,50 100,60 Q115,55 125,70 Q140,68 145,80 Q140,90 120,90 H70 Q60,90 60,80 Z">
+      <animateTransform attributeName="transform" type="translate" from="-200 0" to="800 0" dur="30s" repeatCount="indefinite" />
+    </path>
+  </g>
+
+  <!-- Stationary Train in Center -->
+  <g id="train">
+    <!-- Locomotive -->
+    <rect x="370" y="450" width="60" height="30" fill="#1a1a4e" />
+    <rect x="425" y="445" width="5" height="10" fill="#1a1a4e" />
+    <circle cx="380" cy="485" r="7" fill="#000" />
+    <circle cx="415" cy="485" r="7" fill="#000" />
+
+    <!-- Smoke -->
+    <circle cx="430" cy="440" r="4" fill="white">
+      <animate attributeName="cy" from="440" to="420" dur="2s" repeatCount="indefinite" />
+      <animate attributeName="opacity" from="1" to="0" dur="2s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Train Cars -->
+    <rect x="440" y="450" width="50" height="30" fill="#1a1a4e" />
+    <rect x="500" y="450" width="50" height="30" fill="#1a1a4e" />
+    <circle cx="450" cy="485" r="7" fill="#000" />
+    <circle cx="530" cy="485" r="7" fill="#000" />
+    <circle cx="510" cy="485" r="7" fill="#000" />
+
+    <!-- Windows -->
+    <g fill="#ffb400">
+      <rect x="445" y="455" width="8" height="10" />
+      <rect x="455" y="455" width="8" height="10" />
+      <rect x="465" y="455" width="8" height="10" />
+      <rect x="505" y="455" width="8" height="10" />
+      <rect x="515" y="455" width="8" height="10" />
+      <rect x="525" y="455" width="8" height="10" />
+    </g>
+  </g>
+</svg>
