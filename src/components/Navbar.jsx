@@ -1,6 +1,18 @@
 import { NavLink } from "react-router-dom";
-
+import logo from "../assets/logo.png";
+import { useEffect, useState } from "react";
 const Navbar = () => {
+  const [theme, setTheme] = useState("cupcake");
+  const handleThemeChange = (e) => {
+    e.target.checked ? setTheme("symthwave") : setTheme("cupcake");
+    document.documentElement.setAttribute("data-theme", theme);
+  };
+  console.log(theme);
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+    const localTheme = localStorage.getItem("theme");
+    document.querySelector("html").setAttribute("data-theme", localTheme);
+  }, [theme]);
   const nav = (
     <>
       <NavLink
@@ -73,7 +85,10 @@ const Navbar = () => {
             {nav}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">Mohiuddin.dev</a>
+        <a className="btn btn-ghost text-xl gap-0">
+          <img src={logo} className="w-9 h-9" alt="" />
+          .dev
+        </a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 gap-4">{nav}</ul>
@@ -81,6 +96,7 @@ const Navbar = () => {
       <div className="navbar-end">
         <label className="toggle text-base-content">
           <input
+            onChange={handleThemeChange}
             type="checkbox"
             value="synthwave"
             className="theme-controller"
