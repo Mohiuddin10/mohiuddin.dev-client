@@ -1,18 +1,20 @@
 import { NavLink } from "react-router-dom";
 import logo from "../assets/logo.png";
 import { useEffect, useState } from "react";
+
 const Navbar = () => {
   const [theme, setTheme] = useState("light");
   const toggleTheme = (e) => {
     e.target.checked ? setTheme("symthwave") : setTheme("light");
     document.documentElement.setAttribute("data-theme", theme);
   };
-  console.log(theme);
+
   useEffect(() => {
     localStorage.setItem("theme", theme);
     const localTheme = localStorage.getItem("theme");
     document.querySelector("html").setAttribute("data-theme", localTheme);
   }, [theme]);
+  const themeData = { theme, setTheme, toggleTheme };
   const nav = (
     <>
       <NavLink
@@ -58,7 +60,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar bg-base-100 shadow-lg sticky top-0 z-10">
+    <div className="navbar bg-base-50 shadow-lg sticky top-0 z-10 backdrop-blur-md">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
