@@ -3,29 +3,21 @@ import image from "../assets/picture.jpg";
 
 const Hero = () => {
   return (
-    // start
-    <div className="relative w-full min-h-[calc(100vh-133px)] overflow-hidden ">
-      {/* Background Video */}
-      <video
-        className="absolute left-0 w-full h-full object-cover"
-        autoPlay
-        muted
-        loop
-        playsInline
-      >
-        <source src={video} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-
-      {/* Content over video */}
-      <div className="flex">
-        <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center p-4 bg-black/30 backdrop-blur-sm">
-          <h1 className="text-4xl font-bold drop-shadow-lg">Welcome</h1>
-          <p className="text-lg mt-2">Tailwind + DaisyUI Video Background</p>
-        </div>
-        <div className="">
-          <img src={image} alt="" />
-        </div>
+    <div className="gap-6 h-screen flex items-center justify-center bg-blue-100">
+      <div className="text-left pl-4 w-2/3 text-black">
+        <h2 className="animate-float text-4xl md:text-6xl font-bold text-blue-800 drop-shadow-lg bg-blue-200 px-6 py-4 rounded-full shadow-xl border border-blue-300">
+          Mohammad Mohiuddin
+        </h2>
+        <h3 className="text-2xl">Full Stack Developer</h3>
+        <p>
+          I am a full stack developer with a passion for creating dynamic and
+          responsive web applications. I have experience in both front-end and
+          back-end development, and I am always eager to learn new technologies
+          and improve my skills.
+        </p>
+      </div>
+      <div className={`bg-[${image}]`}>
+        <img className="" src={image} alt="" />
       </div>
     </div>
   );
