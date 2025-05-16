@@ -3,7 +3,7 @@ import image from "../assets/picture.jpg";
 
 const Hero = () => {
   return (
-    <div className="gap-6 h-screen flex items-center justify-center bg-blue-100">
+    <div className="gap-6 h-screen flex items-center justify-center">
       <div className="text-left pl-4 w-2/3 text-black">
         <h2 className="animate-float text-4xl md:text-6xl font-bold text-blue-800 drop-shadow-lg bg-blue-200 px-6 py-4 rounded-full shadow-xl border border-blue-300">
           Mohammad Mohiuddin
@@ -19,6 +19,7 @@ const Hero = () => {
       <div className={`bg-[${image}]`}>
         <img className="" src={image} alt="" />
       </div>
+      <button className="btn">Resume</button>
     </div>
   );
 };
