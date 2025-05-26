@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <div className="relative w-full min-h-[calc(100vh-133px)] overflow-hidden opacity-80">
       <video
-        className="absolute left-0 w-full h-full object-cover"
+        className="absolute left-0 w-full object-cover"
         autoPlay
         muted
         loop
