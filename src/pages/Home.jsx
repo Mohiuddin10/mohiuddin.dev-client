@@ -1,22 +1,23 @@
-import video from "../assets/light.mov";
-import Hero from "./Hero";
+import bgImage from "../assets/bg.jpg";
+
 const Home = () => {
   return (
-    <div className="relative w-full min-h-[calc(100vh-133px)] overflow-hidden opacity-80">
-      <video
-        className="absolute left-0 w-full object-cover"
-        autoPlay
-        muted
-        loop
-        playsInline
-      >
-        <source src={video} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+    <div
+      className="hero min-h-screen"
+      style={{
+        backgroundImage: `url(${bgImage})`,
+      }}
+    >
       <div className="hero-overlay"></div>
-      <div className="hero-content text-neutral-content text-center">
-        <div className="w-full h-full">
-          <Hero />
+      <div className="hero-content text-neutral-content text-left">
+        <div className="max-w-md">
+          <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
+          <p className="mb-5">
+            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
+            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
+            a id nisi.
+          </p>
+          <button className="btn btn-primary">Get Started</button>
         </div>
       </div>
     </div>
